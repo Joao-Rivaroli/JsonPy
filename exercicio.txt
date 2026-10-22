@@ -1,0 +1,16 @@
+Crie um tema com 4 campos
+
+Criar o menu:
+0 - SAIR
+1 - Cadastrar [cadastra um que não exista]
+2 - Listar
+3 - Buscar
+4 - Editar
+5 - Excluir
+Escolha: _
+
+Requisitos:
+- Editar: Caso exista, exibir o registro e permitir editar sem considerar o ID
+- Excluir: Exibir o registro antes de excluir e confimar se é para excluir
+- Cadastro: Verificar se o id não está vazio
+- Depois que fizer todo o programa, faça uma versão com subalgoritmos
