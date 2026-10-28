@@ -6,11 +6,9 @@ def gravacao_json(arquivo: str, jogadores: list) -> None:
     with open(arquivo, "w", encoding="utf-8") as f:
         json.dump(jogadores, f, indent=4, ensure_ascii=False)
 
-
 def carregar_arquivo(arquivo: str) -> list:
     with open(arquivo, "r", encoding="utf-8") as f:
         return json.load(f)
-
 
 def verificar_id(id_jogador: str, jogadores: list) -> bool:
     for jogador in jogadores:
@@ -18,13 +16,11 @@ def verificar_id(id_jogador: str, jogadores: list) -> bool:
             return True
     return False
 
-
 def buscar_jogador(id_jogador: str, jogadores: list) -> dict:
     for jogador in jogadores:
         if jogador["id_jogador"] == id_jogador:
             return jogador
     return None
-
 
 def cadastrar_jogador(id_jogador: int, nickname: str, horas_jogadas: int, dinheiro_gasto: float) -> dict:
     jogador = {
@@ -33,16 +29,13 @@ def cadastrar_jogador(id_jogador: int, nickname: str, horas_jogadas: int, dinhei
         "horas_jogadas": horas_jogadas,
         "dinheiro_gasto": dinheiro_gasto
     }
-
     return jogador
-
 
 arquivo = "jogadores.json"
 jogadores = []
 
 if os.path.exists(arquivo):
     jogadores = carregar_arquivo(arquivo)
-
 
 while True:
     print("""
